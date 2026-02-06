@@ -1,0 +1,250 @@
+#nav {
+  position: fixed;
+  z-index: 55;
+  background-color: white;
+}
+.hover-btn {
+  position: relative;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+}
+.hover-btn p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+.hover-btn:hover p {
+  color: #f8f8f8;
+}
+.hover-btn::before,
+.hover-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: #000;
+
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.hover-btn::before {
+  left: 0%;
+  top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: translateX(-100%);
+}
+.hover-btn::after {
+  top: 50%;
+  right: 0%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translateX(100%);
+}
+.hover-btn:hover::before,
+.hover-btn:hover::after {
+  transform: translateX(0);
+}
+.hero {
+  background-image: url(pic/hero-img2.jpg);
+  background-size: 100% 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: pic 16s ease;
+  animation-iteration-count: infinite;
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    background-size: 100% 50vh;
+  }
+}
+@keyframes pic {
+  0% {
+    background-image: url(pic/hero-img2.jpg);
+  }
+  40% {
+    background-image: url(pic/hero-img3.jpg);
+  }
+  70% {
+    background-image: url(pic/hero-img-1.jpg);
+  }
+  100% {
+    background-image: url(pic/hero-img2.jpg);
+  }
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, #020267f4, #020267b1, #02026700), transparent;
+  z-index: 1;
+}
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+.content h1 {
+  line-height: 1;
+}
+.contact-hover {
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #1c1c8d;
+  overflow: hidden;
+  background: transparent;
+}
+.contact-hover p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+.contact-hover:hover p {
+  color: #020267;
+}
+.contact-hover::before,
+.contact-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: #f8f8f8;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.contact-hover::before {
+  left: 0%;
+  top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: translateX(-101%);
+}
+.contact-hover::after {
+  top: 50%;
+  right: 0%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translateX(101%);
+}
+.contact-hover:hover::before,
+.contact-hover:hover::after {
+  transform: translateX(0);
+}
+.explore-hover {
+  position: relative;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+  background-color: #1c1c8d;
+}
+.explore-hover p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+.explore-hover:hover p {
+  color: #020267;
+}
+.explore-hover::before,
+.explore-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: #fefefe;
+
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.explore-hover::before {
+  left: 0%;
+  top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: translateX(-101%);
+}
+.explore-hover::after {
+  top: 50%;
+  right: 0%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translateX(101%);
+}
+.explore-hover:hover::before,
+.explore-hover:hover::after {
+  transform: translateX(0);
+}
+#details-about {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.352);
+  width: 90%;
+  margin-bottom: 10px;
+}
+#satisfied-clients {
+  border-left: 1.5px solid #1c1c8d;
+  box-shadow: 2px 12px 14px rgba(0, 0, 0, 0.178);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+
+  /* (اختیاری) fade چپ و راست مثل نمونه */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  will-change: transform;
+}
+
+.logo {
+  flex: 0 0 auto;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+  opacity: 0.25;
+  filter: grayscale(1);
+  transition: 0.25s ease;
+  transform: scale(0.98);
+}
+
+.logo.active img {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.08);
+}
+#solve {
+  transition: color 0.4s ease;
+}
+#solve:hover {
+  color: #1c1c8d;
+}

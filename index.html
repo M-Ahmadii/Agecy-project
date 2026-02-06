@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agency</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@600&family=Inconsolata:wght@200..900&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Licorice&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Momo+Signature&family=Pacifico&family=Permanent+Marker&family=Playwrite+NO:wght@100..400&family=Playwrite+US+Trad+Guides&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+</html>
+<body>
+  <!---------------------------------------------------------------------------------
+                            header
+    --------------------------------------------------------------------------------->
+  <header
+    class="sm:w-[100%] bg-[black] hidden sm:flex h-auto p-4 sm:flex-row items-center"
+  >
+    <i class="fa-solid fa-phone ml-[8%] text-[white]"></i
+    ><a href=""><span class="text-[white]">+208-765-9876</span></a>
+    <i class="fa-solid fa-envelope text-[white] ml-[2%]"></i
+    ><a href="mailto:contact@giriseclean.com"
+      ><span class="text-[white]">contact@hiriseclean.com</span></a
+    >
+    <div class="ml-[45%] gap-2 flex items-center">
+      <span class="text-[white]">Follow Us:</span>
+      <a href=""> <i class="fa-brands fa-twitter text-[white]"></i></a>
+      <a href=""> <i class="fa-brands fa-linkedin-in text-[white]"></i></a>
+      <a href=""><i class="fa-brands fa-facebook-f text-[white]"></i></a>
+      <a href=""> <i class="fa-brands fa-youtube text-[white]"></i></a>
+    </div>
+  </header>
+  <!----------------------------------------------------------------------------------
+                            navbar
+   ----------------------------------------------------------------------------------->
+  <nav
+    id="nav"
+    class="w-full bg-white-100 flex justify-center mt-0 sm:mt-[0%] p-2"
+  >
+    <div
+      id="menu"
+      class="w-[100%] h-[10vh] sm:w-[100%] sm:h-[10vh] flex items-center"
+    >
+      <div
+        class="w-[50%] h-[7vh] sm:w-[14%] sm:h-[10vh] sm:ml-[6%] flex items-center sm:-mt-[0]"
+      >
+        <h1 class="text-[#020267] text-[8vw] sm:text-[3.5vw]">
+          <b>Tek</b>info
+        </h1>
+      </div>
+      <ul class="sm:flex hidden w-[70%] items-center gap-9 sm:ml-[20%]">
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">About</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">Services</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">Team</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267] text-[1.5vw]">Blog</a>
+        </li>
+        <button class="hover-btn ml-[2.5%] bg-[#020267] pl-3 pr-3 w-[20%] p-3">
+          <p class="text-[white] text-[1.3vw]">
+            Get a Quote <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </button>
+      </ul>
+      <button
+        onclick="toggleMenu1()"
+        class="text-[#020267] flex sm:hidden ml-[65%]"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div
+      id="responsiveMenu"
+      class="absolute top-full left-0 w-full bg-white shadow-lg hidden sm:hidden"
+    >
+      <ul class="flex flex-col divide-y p-3">
+        <li>
+          <a href="#" class="text-[#020267]">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267]"></a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267]">Apartmants</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267]">About</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267]">Get a Quote</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#020267]">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- -----------------------------------------------------------------
+                           hero section
+   ---------------------------------------------------------------------->
+  <div
+    class="hero w-[100%] h-[70vh] sm:w-[100%] sm:h-[90vh] flex sm:flex justify-center sm:flex-col flex-col p-0"
+  >
+    <div
+      class="content flex flex-col sm:ml-[10%] sm:mt-[5%] mt-[40%] gap-5 justify-center items-start w-[100%] h-auto sm:h-[70vh] sm:w-[50%] text-[white] p-9"
+      data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="1700"
+    >
+      <div
+        class="flex flex-row w-[60%] sm:w-[30%]"
+        data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <p class="-mt-[4%]">____</p>
+        <h4 class="ml-[2%]">Best in Company</h4>
+      </div>
+      <h1
+        class="sm:text-[5vw] text-[10vw]"
+        data-aos="fade-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <b>Get Our Business This It Solution</b>
+      </h1>
+      <p data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore
+        commodi autem. Asperiores ipsum nobis optio natus officiis
+      </p>
+      <div class="flex flex-row w-[100%] gap-2 mt-[10px]">
+        <button
+          class="explore-hover ml-[2.5%] pl-3 pr-3 w-[40%] sm:w-[30%] p-3"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="1650"
+        >
+          <p class="text-[white] text-[3.5vw] sm:text-[1.3vw]">
+            Explore More <i class="fa-solid fa-arrow-right"></i>
+          </p></button
+        ><button
+          class="contact-hover ml-[2.5%] pl-3 pr-3 w-[40%] sm:w-[30%] p-3"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="1700"
+        >
+          <p class="text-[white] text-[3.5vw] sm:text-[1.3vw]">
+            Contact Us <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </button>
+      </div>
+    </div>
+    <div class="sm:-mt-[3%] mt-[5%] z-50">
+      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#ffffff"
+          d="M0,64L60,69.3C120,75,240,85,360,80C480,75,600,53,720,48C840,43,960,53,1080,64C1200,75,1320,85,1380,90.7L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+        />
+      </svg>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------
+                            page 2
+  ----------------------------------------------------------------------->
+  <div
+    class="w-[100%] sm:w-[100%] h-auto sm:h-[100vh] bg-[white] flex sm:flex justify-center items-center sm:flex-row flex-col"
+  >
+    <div class="sm:w-[55%] w-[100%]">
+      <img
+        class="w-[100%] h-[40vh] sm:h-[80vh] relative"
+        src="pic/photo_2026-02-05_17-53-00.jpg"
+        alt=""
+      />
+      <div
+        style="border: 14px solid rgb(241, 239, 239); padding: 25px"
+        class="w-[4.5%] sm:-mt-[33%] sm:ml-[33%] -mt-[80%] ml-[60%] rounded-full h-[9vh] bg-[#1c1c8d] absolute flex justify-center items-center"
+      >
+        <a href="">
+          <i
+            class="fa-solid fa-play text-[white] text-center text-[4vw] sm:text-[1.5vw]"
+          ></i
+        ></a>
+      </div>
+    </div>
+    <div
+      class="sm:w-[50%] justify-center items-start flex flex-col w-[100%] gap-5 p-4"
+    >
+      <div id="details-about" class="flex flex-col gap-5 pb-9">
+        <h4 class="text-[#1c1c8d] font-semibold">ABOUT TEKINFO</h4>
+        <h1
+          style="line-height: 1"
+          class="sm:text-[3vw] text-[6vw] w-[100%] font-bold"
+        >
+          What Can Clients With The About Solution
+        </h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ex
+          voluptatibus architecto incidunt, tenetur ratione maiores
+        </p>
+      </div>
+      <div
+        class="flex flex-col w-[90%] sm:flex sm:flex-row items-center sm:justify-start gap-4 justify-center"
+      >
+        <div class="flex flex-col sm:w-[50%] w-[100%] items-start gap-5">
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-check text-[#1c1c8d]"></i
+            ><span>Branding and design Identity</span>
+          </div>
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-check text-[#1c1c8d]"></i
+            ><span>Website Marketing Solution</span>
+          </div>
+          <div class="flex flex-row items-center">
+            <i class="fa-solid fa-check text-[#1c1c8d]"></i
+            ><span>Unlimited Download Data</span>
+          </div>
+        </div>
+        <div
+          id="satisfied-clients"
+          class="w-[50%] sm:w-[45%] h-[10vh] sm:h-[20vh] flex flex-row justify-start items-center p-4"
+        >
+          <i
+            class="fa-solid fa-users sm:text-[3vw] text-[7vw] text-[#1c1c8d]"
+          ></i>
+          <div class="flex flex-col justify-center items-center ml-3">
+            <h3
+              class="counter sm:text-[3vw] text-[6vw] text-[#1c1c8d] font-bold"
+              data-target="6561"
+              data-suffix="+"
+            >
+              <b>0</b>
+            </h3>
+            <h1 class="text-[#5c5c70] sm:text-[1.3vw] text-[3vw]">
+              Satisfied Client
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row w-[90%] mt-[5%]">
+        <button
+          class="hover-btn ml-[2.5%] bg-[#020267] pl-3 pr-3 w-[50%] sm:w-[30%] p-3"
+        >
+          <p class="text-[white] text-[3.6vw] sm:text-[1.3vw]">
+            Explore More <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </button>
+        <div class="flex flex-row ml-4 w-[60%]">
+          <div
+            style="border: 1.5px solid #1c1c8d; padding: 5px"
+            class="rounded-full"
+          >
+            <i
+              class="fa-solid fa-phone bg-[#1c1c8d] flex items-center justify-center text-[white] rounded-full p-6 sm:p-6 h-[5vh]"
+            ></i>
+          </div>
+          <div class="flex flex-col justify-center items-center ml-2">
+            <p class="sm:text-[1.1vw] text-[3vw]">Call Us Now</p>
+            <a href=""
+              ><p class="sm:text-[1.3vw] text-[3.3vw]">+208-555-8755</p></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------
+                            page2 section2
+   --------------------------------------------------------------------->
+  <div class="w-[100%] h-[10vh] flex justify-center items-center gap-4">
+    <span class="text-[#1b1b1d30] -mt-[1%] sm:flex hidden"
+      >_____________________________________________________________</span
+    >
+    <p class="text-[black]"><b>1k+ Brands Trust Us</b></p>
+    <span class="text-[#1b1b1d30] -mt-[1%] sm:flex hidden"
+      >_____________________________________________________________</span
+    >
+  </div>
+  <div class="slider" id="slider">
+    <div class="track" id="track">
+      <div class="logo">
+        <img src="pic/nike-brand-removebg-preview.png" alt="" />
+      </div>
+      <div class="logo">
+        <img src="pic/nike-brand-removebg-preview.png" alt="" />
+      </div>
+      <div class="logo">
+        <img src="pic/nike-brand-removebg-preview.png" alt="" />
+      </div>
+      <div class="logo">
+        <img src="pic/nike-brand-removebg-preview.png" alt="" />
+      </div>
+      <div class="logo">
+        <img src="pic/nike-brand-removebg-preview.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------------------------------------------
+                           page3
+   --------------------------------------------------------------------------->
+  <div
+    class="flex flex-col gap-5 w-[100%] sm:w-[100%] p-4 h-auto justify-center items-center sm:h-[110vh] bg-[#1b1b1d30]"
+  >
+    <div class="flex flex-row w-[80%]">
+      <div class="flex flex-col justify-start w-[70%] sm:w-[30%]">
+        <h4 class="text-[#1c1c8d] sm:text-sm text-[2.4vw] font-semibold">
+          WHAT WE DO
+        </h4>
+        <h1 class="sm:text-[2vw] text-[3.5vw]">
+          <b>We Solve IT Problems with Technology</b>
+        </h1>
+      </div>
+      <div
+        class="flex w-[35%] sm:w-[80%] items-center justify-end bg-[transparent]"
+      >
+        <button
+          class="hover-btn ml-[2.5%] bg-[#020267] pl-3 pr-3 w-[100%] sm:w-[20%] p-3"
+        >
+          <p class="text-[white] text-[2.3vw] sm:text-[1.3vw]">
+            Get a Quote <i class="fa-solid fa-arrow-right"></i>
+          </p>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-4 sm:flex sm:flex-row ga-[4] w-[100%] sm:w-[100%] items-center justify-center"
+    >
+      <div
+        class="w-[60%] bg-[white] sm:w-[20%] sm:h-[55vh] rounded-xl items-start flex flex-col"
+      >
+        <img
+          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
+          class="relative w-[100%]"
+          src="pic/database-security.jpg"
+          alt=""
+        />
+        <div
+          class="absolute w-[8%] h-[4vh] ml-[2%] mt-[25%] sm:mt-[8%] sm:ml-[1%] flex justify-center items-center sm:w-[5%] rounded-md sm:h-[10vh] bg-[#1c1c8d]"
+        >
+          <i
+            class="fa-solid fa-database text-[white] text-[3.5vw] sm:text-[1.5vw]"
+          ></i>
+        </div>
+        <div class="flex flex-col p-4 w-[100%] gap-4">
+          <h1 class="font-semibold ml-[2%] mt-[9%]">Database Security</h1>
+          <p class="text-sm text-[gray]">
+            Accumsan.pellentesque in magna ticvidunt , this is.
+          </p>
+          <button id="solve" class="text-left text-[gray]">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-[60%] bg-[white] sm:w-[20%] sm:h-[55vh] rounded-xl items-start flex flex-col"
+      >
+        <img
+          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
+          class="relative w-[100%]"
+          src="pic/IT-consultancy.jpg"
+          alt=""
+        />
+        <div
+          class="absolute w-[8%] h-[4vh] ml-[2%] mt-[25%] sm:mt-[8%] sm:ml-[1%] flex justify-center items-center sm:w-[5%] rounded-md sm:h-[10vh] bg-[#1c1c8d]"
+        >
+          <i
+            class="fa-solid fa-laptop-code text-[white] text-[3.5vw] sm:text-[1.5vw]"
+          ></i>
+        </div>
+        <div class="flex flex-col p-4 w-[100%] gap-4">
+          <h1 class="font-semibold ml-[2%] mt-[9%]">IT Consultancy</h1>
+          <p class="text-sm text-[gray]">
+            Accumsan.pellentesque in magna ticvidunt , this is.
+          </p>
+          <button id="solve" class="text-left text-[gray]">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-[60%] bg-[white] sm:w-[20%] sm:h-[55vh] rounded-xl items-start flex flex-col"
+      >
+        <img
+          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
+          class="relative w-[100%]"
+          src="pic/app-development.jpg"
+          alt=""
+        />
+        <div
+          class="absolute w-[8%] h-[4vh] ml-[2%] mt-[25%] sm:mt-[8%] sm:ml-[1%] flex justify-center items-center sm:w-[5%] rounded-md sm:h-[10vh] bg-[#1c1c8d]"
+        >
+          <i
+            class="fa-solid fa-microchip text-[white] text-[3.5vw] sm:text-[1.5vw]"
+          ></i>
+        </div>
+        <div class="flex flex-col p-4 w-[100%] gap-4">
+          <h1 class="font-semibold ml-[2%] mt-[9%]">App Development</h1>
+          <p class="text-sm text-[gray]">
+            Accumsan.pellentesque in magna ticvidunt , this is.
+          </p>
+          <button id="solve" class="text-left text-[gray]">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-[60%] bg-[white] sm:w-[20%] sm:h-[55vh] rounded-xl items-start flex flex-col"
+      >
+        <img
+          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
+          class="relative w-[100%]"
+          src="pic/database.jpg"
+          alt=""
+        />
+        <div
+          class="absolute w-[8%] h-[4vh] ml-[2%] mt-[25%] sm:mt-[8%] sm:ml-[1%] flex justify-center items-center sm:w-[5%] rounded-md sm:h-[10vh] bg-[#1c1c8d]"
+        >
+          <i
+            class="fa-solid fa-lock text-[white] text-[3.5vw] sm:text-[1.5vw]"
+          ></i>
+        </div>
+        <div class="flex flex-col p-4 w-[100%] gap-4">
+          <h1 class="font-semibold ml-[2%] mt-[9%]">Database Security</h1>
+          <p class="text-sm text-[gray]">
+            Accumsan.pellentesque in magna ticvidunt , this is.
+          </p>
+          <button id="solve" class="text-left text-[gray]">
+            Read More <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-[3%] gap-4 rounded-md flex flex-col sm:flex justify-center items-start sm:items-center h-[20vh] sm:flex-row w-[80%] bg-[#1c1c8d]"
+    >
+      <div
+        style="border-right: 2px solid white"
+        class="flex flex-row ml-4 sm:w-[25%] w-[100%]"
+      >
+        <div
+          style="border: 1.5px solid white; padding: 5px"
+          class="rounded-full"
+        >
+          <i
+            class="fa-solid fa-phone bg-[white] flex items-center justify-center text-[#1c1c8d] rounded-full p-6 sm:p-6 h-[5vh]"
+          ></i>
+        </div>
+        <div class="flex flex-col justify-center items-left ml-2 text-[white]">
+          <p class="sm:text-[1.1vw] text-[3vw]">Call Us Now</p>
+          <a href=""
+            ><p class="sm:text-[1.3vw] text-[3.3vw]">+208-555-8755</p></a
+          >
+        </div>
+      </div>
+      <p class="sm:w-[20%] w-[100%] font-semibold text-[white] ml-[5%]">
+        Stay Connected With Cutting Edge IT
+      </p>
+      <button
+        class="hover-btn ml-[2.5%] bg-[white] pl-3 pr-3 ml-[9%] w-[50%] sm:w-[18%] p-3"
+      >
+        <p class="text-[#1c1c8d] text-[2.5vw] sm:text-[1.3vw]">
+          Get a Quote <i class="fa-solid fa-arrow-right"></i>
+        </p>
+      </button>
+    </div>
+  </div>
+  <!-------------------------------------------------------------------------
+                           page4
+    -------------------------------------------------------------------------->
+  <div
+    class="w-[100%] sm:w-[100%] p-5 gap-5 sm:h-[70vh] flex flex-col sm:flex sm:flex-col justify-center items-center bg-[white]"
+  >
+    <div class="flex flex-col sm:w-[50%] w-[100%] items-center justify-center">
+      <h4 class="text-[#1c1c8d] sm:text-sm text-[3.4vw] font-semibold">
+        HOW IT WORK
+      </h4>
+      <h1 class="sm:text-[2vw] text-[5.5vw]">
+        <b>Standard Work Process</b>
+      </h1>
+    </div>
+    <div
+      class="w-[90%] flex flex-col sm:flex sm:flex-row justify-center items-center sm:gap-9 gap-[80px] p-4"
+    >
+      <div
+        class="flex flex-col gap-2 items-center justify-center w-[80%] sm:w-[25%] sm:h-[45vh]"
+      >
+        <div
+          style="box-shadow: 0 12px 16px rgba(0, 0, 0, 0.247)"
+          class="rounded-full bg-white sm:w-[35%] w-[40%] relative flex items-center justify-center p-5"
+        >
+          <p
+            class="sm:-mt-[120%] -mt-[130%] sm:-ml-[15%] -ml-[35%] bg-[#1c1c8d] rounded-full p-4 text-[white] justify-center items-center flex w-[3%] sm:w-[5%] h-[3vh] sm:h-[5%]"
+          >
+            1
+          </p>
+          <img
+            class="-ml-[25%]"
+            src="pic/Choose-service-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <h1 class="font-bold tracking-wider sm:mt-9 mt-[2%]">
+          Choose A Service
+        </h1>
+        <p class="text-center text-[gray]">
+          In a free hour, when our powe of choice is untrammeled
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-2 items-center justify-center w-[80%] sm:w-[25%] sm:h-[45vh]"
+      >
+        <h1 class="font-bold tracking-wider">Define Requirements</h1>
+        <p class="text-center text-[gray]">
+          In a free hour, when our powe of choice is untrammeled
+        </p>
+        <div
+          style="box-shadow: 0 12px 16px rgba(0, 0, 0, 0.247)"
+          class="sm:mt-9 mt-[2%] rounded-full bg-white sm:w-[35%] w-[40%] relative flex items-center justify-center p-5"
+        >
+          <p
+            class="sm:-mt-[135%] -mt-[130%] sm:-ml-[35%] -ml-[35%] bg-[#1c1c8d] rounded-full p-4 text-[white] justify-center items-center flex w-[3%] sm:w-[5%] h-[3vh] sm:h-[5%]"
+          >
+            2
+          </p>
+          <img
+            class="-ml-[25%] w-[90%]"
+            src="pic/define-requirements-removebg-preview.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 items-center justify-center w-[80%] sm:w-[25%] sm:h-[45vh]"
+      >
+        <div
+          style="box-shadow: 0 12px 16px rgba(0, 0, 0, 0.247)"
+          class="rounded-full bg-white sm:w-[35%] w-[40%] relative flex items-center justify-center p-5"
+        >
+          <p
+            class="sm:-mt-[130%] -mt-[130%] sm:-ml-[35%] -ml-[35%] bg-[#1c1c8d] rounded-full p-4 text-[white] justify-center items-center flex w-[3%] sm:w-[5%] h-[3vh] sm:h-[5%]"
+          >
+            3
+          </p>
+          <img
+            class="-ml-[25%]"
+            src="pic/request-meeting-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <h1 class="font-bold tracking-wider sm:mt-9 mt-[2%]">
+          Request A Meeting
+        </h1>
+        <p class="text-center text-[gray]">
+          In a free hour, when our powe of choice is untrammeled
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-2 items-center justify-center w-[80%] sm:w-[25%] sm:h-[45vh]"
+      >
+        <h1 class="font-bold tracking-wider">Final Solution</h1>
+        <p class="text-center text-[gray]">
+          In a free hour, when our powe of choice is untrammeled
+        </p>
+        <div
+          style="box-shadow: 0 12px 16px rgba(0, 0, 0, 0.247)"
+          class="sm:mt-9 mt-[2%] rounded-full bg-white sm:w-[35%] w-[40%] relative flex items-center justify-center p-5"
+        >
+          <p
+            class="sm:-mt-[135%] -mt-[130%] sm:-ml-[35%] -ml-[35%] bg-[#1c1c8d] rounded-full p-4 text-[white] justify-center items-center flex w-[3%] sm:w-[5%] h-[3vh] sm:h-[5%]"
+          >
+            4
+          </p>
+          <img
+            class="-ml-[25%] w-[90%]"
+            src="pic/finail-solution-removebg-preview.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------
+                           page 5
+   ----------------------------------------------------------------------- -->
+  <div
+    class="flex flex-col w-[100%] sm:w-[100%] items-left justify-center sm:h-[80vh] bg-[#1c1c8d] p-4"
+  >
+    <div class="flex flex-col sm:w-[40%] w-[80%] p-4 pl-9 gap-2">
+      <h4 class="text-[white] sm:text-sm text-[3.4vw]">HOW IT WORK</h4>
+      <h1 class="sm:text-[3.4vw] text-[white] text-[5.5vw]">
+        <b>We Are Increasing Business Success</b>
+      </h1>
+    </div>
+    <div
+      class="w-[100%] gap-2 sm:h-[50vh] sm:w-[100%] flex flex-col sm:flex sm:flex-row justify-center items-center"
+    >
+      <div
+        style="border-right: 1.5px solid rgba(255, 255, 255, 0.441)"
+        class="flex flex-col sm:h-[30vh] w-[50%] sm:w-[25%] items-center justify-center p-3"
+      >
+        <img class="w-[30%]" src="pic/clients-removebg-preview.png" alt="" />
+        <h3
+          class="counter sm:text-[3vw] text-[6vw] text-[white] font-bold"
+          data-target="6561"
+          data-suffix="+"
+        >
+          <b>0</b>
+        </h3>
+        <p class="text-[white]">Satisfied Clients</p>
+      </div>
+      <div
+        style="border-right: 1.5px solid rgba(255, 255, 255, 0.441)"
+        class="flex flex-col sm:h-[30vh] w-[50%] sm:w-[25%] items-center justify-center p-3"
+      >
+        <img
+          class="w-[30%]"
+          src="pic/finish-project-removebg-preview.png"
+          alt=""
+        />
+        <h3
+          class="counter sm:text-[3vw] text-[6vw] text-[white] font-bold"
+          data-target="600"
+          data-suffix="+"
+        >
+          <b>0</b>
+        </h3>
+        <p class="text-[white]">Finished Project</p>
+      </div>
+      <div
+        style="border-right: 1.5px solid rgba(255, 255, 255, 0.441)"
+        class="flex flex-col sm:h-[30vh] w-[50%] sm:w-[25%] items-center justify-center p-3"
+      >
+        <img
+          class="w-[30%]"
+          src="pic/Skilled-Expert-removebg-preview.png"
+          alt=""
+        />
+        <h3
+          class="counter sm:text-[3vw] text-[6vw] text-[white] font-bold"
+          data-target="250"
+          data-suffix="+"
+        >
+          <b>0</b>
+        </h3>
+        <p class="text-[white]">Skilled Experts</p>
+      </div>
+      <div
+        class="flex flex-col sm:h-[45vh] w-[50%] sm:w-[25%] items-center justify-center p-3"
+      >
+        <img
+          class="w-[30%]"
+          src="pic/media-posts-removebg-preview.png"
+          alt=""
+        />
+        <h3
+          class="counter sm:text-[3vw] text-[6vw] text-[white] font-bold"
+          data-target="590"
+          data-suffix="+"
+        >
+          <b>0</b>
+        </h3>
+        <p class="text-[white]">Media Posts</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
