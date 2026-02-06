@@ -53,11 +53,12 @@
   position: relative;
   overflow: hidden;
   animation: pic 16s ease;
+  background-repeat: no-repeat;
   animation-iteration-count: infinite;
 }
 @media screen and (max-width: 576px) {
   .hero {
-    background-size: 100% 50vh;
+    background-size: 100% 70vh;
   }
 }
 @keyframes pic {
