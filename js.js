@@ -117,3 +117,44 @@ counters.forEach((counter) => observer.observe(counter));
 
   setTimeout(step, pauseDuration);
 })();
+/*******************************************************************
+                   slider page 6
+****************************************************************/
+
+(() => {
+  const marquee = document.getElementById("marquee2");
+  const track = document.getElementById("track2");
+
+  const originals = Array.from(track.children);
+  originals.forEach((el) => track.appendChild(el.cloneNode(true)));
+
+  const gap = parseFloat(getComputedStyle(track).gap || 24);
+  const itemWidth = originals[0].offsetWidth + gap;
+
+  let index = 0;
+  let x = 0;
+
+  const moveDuration = 800;
+  const pauseDuration = 3000;
+
+  function move() {
+    index++;
+    x = index * itemWidth;
+
+    track.style.transition = `transform ${moveDuration}ms ease`;
+    track.style.transform = `translateX(${-x}px)`;
+
+    if (index >= originals.length) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = 0;
+        x = 0;
+        track.style.transform = `translateX(0)`;
+      }, moveDuration);
+    }
+
+    setTimeout(move, pauseDuration + moveDuration);
+  }
+
+  setTimeout(move, pauseDuration);
+})();
